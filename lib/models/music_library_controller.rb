@@ -49,18 +49,27 @@ class MusicLibraryController
         case input
         when 'list songs'
             self.list_songs
+            self.ask_for_input
         when 'list artists'
             self.list_artists
+            self.ask_for_input
         when 'list genres'
             self.list_genres
+            self.ask_for_input
         when 'list artist'
             self.list_songs_by_artist
+            self.ask_for_input
         when 'list genre'
             self.list_songs_by_genre
+            self.ask_for_input
         when 'play song'
             self.play_song
+            self.ask_for_input
         when 'exit'
             self.exit
+        when 'help'
+            self.help
+            self.ask_for_input
         end
     end
 
@@ -103,10 +112,5 @@ class MusicLibraryController
 
     def exit
     end
-    
-
-    
-
-
 
 end
