@@ -1,7 +1,7 @@
 require 'pry'
 class Song
-  attr_accessor :name, :genre
-  attr_reader :artist
+  attr_accessor :name
+  attr_reader :artist, :genre
   @@all = []
   
   def initialize(name, artist = nil, genre = nil)
@@ -30,6 +30,11 @@ class Song
   def artist=(artist)
     @artist = artist
     artist.add_song(self)
+  end
+  
+  def genre=(genre)
+    @genre = genre
+    genre.songs << self unless genre.songs.include?(self)
   end
   
   def Song.new_from_filename(filename)
