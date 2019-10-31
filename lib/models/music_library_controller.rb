@@ -1,6 +1,6 @@
 class MusicLibraryController
 
-    VALID_INPUT = ['list songs', 'list artists', 'list genres', 'list artist', 'list genre', 'play song', 'exit']
+    VALID_INPUT = ['list songs', 'list artists', 'list genres', 'list artist', 'list genre', 'play song', 'exit', 'help']
 
     def initialize(path = './db/mp3s')
         MusicImporter.new(path).import
